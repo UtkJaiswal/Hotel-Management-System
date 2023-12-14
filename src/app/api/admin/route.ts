@@ -6,25 +6,16 @@ import jwt from "jsonwebtoken"
 
 connect()
 
-export async function POST(request: NextRequest) {
+export async function POST(request:NextRequest) {
     try {
-        
-        const reqBody = await request.json()
-
-        const {email, password } = reqBody
-
-        console.log(reqBody)
-
-        //check if user exists or not
+        const { email, password } = await request.json()
 
         const user = await User.findOne({email})
 
+
         if(!user) {
-            return NextResponse.json({error:"User does not exist"},{status:400})
-
+            return NextResponse.json({error:"Admin user does not exist"},{status:400})
         }
-
-        //check if password is correct
 
         const validPassword = await bcryptjs.compare(password, user.password)
 
@@ -33,7 +24,9 @@ export async function POST(request: NextRequest) {
 
         }
 
-        //create token data
+        if(!user.isAdmin){
+            return NextResponse.json({error:"Not an admin user"},{status:400})
+        }
 
         const tokenData = {
             id:user._id,
@@ -55,10 +48,8 @@ export async function POST(request: NextRequest) {
 
 
 
-
     } catch (error:any) {
-
-        return NextResponse.json({error:error.message}, {status:500})
+        return NextResponse.json({error:error.message},{status:400})
         
     }
 }
