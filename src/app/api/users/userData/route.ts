@@ -9,13 +9,13 @@ connect()
 
 export default async function GET(request:NextRequest) {
     try {
-        const userId = await getDataFromToken(request)
+        // const userId = await getDataFromToken(request)
 
-        const user = await User.findOne({_id:userId}).select("-password")
+        // const user = await User.findOne({_id:userId}).select("-password")
 
         return NextResponse.json({
             message:"User found",
-            data: user
+            // data: user
         })
 
 
