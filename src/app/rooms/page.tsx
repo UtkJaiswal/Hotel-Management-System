@@ -12,7 +12,7 @@ export default function RoomsPage() {
 
     const router = useRouter()
 
-    const [data, setData] = useState("nothing")
+    // const [data, setData] = useState("nothing")
 
     const [rooms, setRooms] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -33,11 +33,11 @@ export default function RoomsPage() {
 
     }
 
-    const getUserDetails = async () => {
-        const res = await axios.get("/api/users/userData")
-        console.log(res.data)
-        setData(res.data.data._id)
-    }
+    // const getUserDetails = async () => {
+    //     const res = await axios.get("/api/users/userData")
+    //     console.log(res.data)
+    //     setData(res.data.data._id)
+    // }
 
     const fetchRooms = async () => {
         try {
@@ -91,6 +91,7 @@ export default function RoomsPage() {
 
       return (
         <div className="flex flex-col items-center">
+          <button onClick={logout}>Logout</button>
           <div className="flex items-center justify-center my-4">
             <div className="mx-2">
               <DatePicker selected={checkInDate} onChange={handleCheckInDateChange} placeholderText="Check-in Date" />
@@ -112,6 +113,8 @@ export default function RoomsPage() {
                       <div className="p-4">
                         <h2 className="text-gray-800 font-bold text-xl">Room {room.room_number}</h2>
                         <p className="text-gray-600 mt-2">Rs.{room.price}</p>
+                        <p className="text-gray-600 mt-2">{room.room_type} Type</p>
+
                         <button 
                         className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                         onClick = { ()=>handleBooking(room._id) }>

@@ -58,7 +58,7 @@ export default function SignupPage() {
             <hr />
             <label htmlFor="email">Email</label>
             <input 
-            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
                 id="email"
                 type="email"
                 value={user.email}
@@ -68,7 +68,7 @@ export default function SignupPage() {
 
             <label htmlFor="name">Name</label>
             <input 
-            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600  text-black"
                 id="name"
                 type="text"
                 value={user.name}
@@ -78,7 +78,7 @@ export default function SignupPage() {
 
             <label htmlFor="password">Password</label>
             <input 
-            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
                 id="password"
                 type="password"
                 value={user.password}
@@ -88,7 +88,7 @@ export default function SignupPage() {
 
             <label htmlFor="phone">Phone</label>
             <input 
-            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+            className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
                 id="phone"
                 type="text"
                 value={user.phone}
@@ -98,7 +98,7 @@ export default function SignupPage() {
 
             <button
              onClick={onSignUp}
-             className="p-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">
+             className="p-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black">
                 {buttonDisabled?"No Sign Up":"Sign Up"}
             </button>
 
