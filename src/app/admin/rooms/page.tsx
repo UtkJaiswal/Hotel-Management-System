@@ -14,7 +14,7 @@ export default function Rooms() {
     useEffect(()=>{
         const fetchRooms = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/admin/rooms")
+                const response = await axios.get(`${[process.env.HOST]}/api/admin/bookingDetails`)
 
                 setRooms(response.data.data)
                 console.log(response.data.data)

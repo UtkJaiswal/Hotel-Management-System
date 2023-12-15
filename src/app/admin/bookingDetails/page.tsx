@@ -11,7 +11,7 @@ export default function Bookings() {
     useEffect(() => {
         const fetchBooking = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/admin/bookingDetails");
+                const response = await axios.get(`${process.env.DOMAIN}/api/admin/bookingDetails`);
                 setBookings(response.data.data);
             } catch (error) {
                 console.error("Error fetching data:", error);

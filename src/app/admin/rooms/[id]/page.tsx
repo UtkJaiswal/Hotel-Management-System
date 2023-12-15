@@ -1,26 +1,6 @@
 "use client"
 
-// import { useState } from "react"
 
-// export default function EditRoom({params}: any) {
-    
-//     const [first, setfirst] = useState(second)
-
-//     return (
-//         <div className="flex flex-col items-center justify-center min-h-screen py-2">
-//             <h1>Profile</h1>
-
-//             <hr />
-
-//             <p className="text-4xl">Profile page 
-
-//                 <span className=" p-2 ml-2 rounded bg-orange-500 text-black">{params.id}</span>
-
-//             </p>
-
-//         </div>
-//     )
-// }
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -45,7 +25,7 @@ export default function UpdateRoom({params}:any) {
     const handleSubmit = async (e:any) => {
         e.preventDefault();
         try {
-          await axios.put('http://localhost:3000/api/admin/updateRoom', roomDetails);
+          await axios.put(`${process.env.DOMAIN}/api/admin/updateRoom`, roomDetails);
         } catch (error) {
           console.error('Error updating room:', error);
         }
@@ -55,7 +35,7 @@ export default function UpdateRoom({params}:any) {
 
         const fetchRoomDetails = async () => {
           try {
-            const response = await axios.post(`http://localhost:3000/api/admin/getRoom`,{room_id:params.id});
+            const response = await axios.post(`${process.env.DOMAIN}/api/admin/getRoom`,{room_id:params.id});
             setRoomDetails(response.data.data);
             console.log("G",roomDetails)
 

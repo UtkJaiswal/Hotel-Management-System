@@ -44,6 +44,7 @@ export default function LoginPage() {
     }
 
     useEffect(()=> {
+        console.log("Gkg",process.env.TOKEN_SECRET)
         if(user.email.length>0 && user.password.length>0) {
             setButtonDisabled(false)
         } else {
