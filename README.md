@@ -34,3 +34,35 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+# Hotel Management App
+
+## Project setup
+
+```bash
+npm run dev
+```
+
+## User module
+
+    1.  Login route: [http://localhost:3000/login](http://localhost:3000/login) allows users to login
+
+    2.  Signup route: [http://localhost:3000/signup](http://localhost:3000/signup) allows users to register
+
+    3.  Rooms route: [http://localhost:3000/rooms](http://localhost:3000/rooms) allows users to select check in and checkout date and accordingly shows the available rooms
+
+## Admin module [http://localhost:3000/admin](http://localhost:3000/admin)
+
+    1.  Login route: [http://localhost:3000/admin](http://localhost:3000/admin) allows admin to login
+
+    2.  Rooms route: [http://localhost:3000/admin/rooms](http://localhost:3000/admin/rooms) shows all rooms
+
+    3.  Update a room route: [http://localhost:3000/admin/rooms/<room_id>](http://localhost:3000/admin/rooms/<room_id>) allows to update a particular room.
+
+    4.  Booking details route: [http://localhost:3000/admin/bookingDetails](http://localhost:3000/admin/bookingDetails) shows all booking details like check in and checkout date, price and the total revenue.
+
+    Credentials for admin:
+
+    email: admin@gmail.com
+    password:admin
