@@ -1,6 +1,5 @@
 # Hotel Management App
 
-This repository contains a Hotel Management App built with Node.js and Express.js.
 
 ## Features
 
