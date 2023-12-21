@@ -1,39 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hotel Management App
 
-## Getting Started
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### User Module
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Login:** Allows users to log in.
+- **Signup:** Enables user registration.
+- **Rooms:** Enables users to view available rooms by selecting check-in and checkout dates.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Admin Module
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Login:** Allows admin to log in.
+- **Rooms:** Displays all rooms available.
+- **Update a Room:** Enables updating room details.
+- **Booking Details:** Displays booking information, including check-in and checkout dates, price, and total revenue.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+### Routes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### User Routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Login:** [http://localhost:3000/login](http://localhost:3000/login)
+- **Signup:** [http://localhost:3000/signup](http://localhost:3000/signup)
+- **Rooms:** [http://localhost:3000/rooms](http://localhost:3000/rooms)
 
-## Deploy on Vercel
+#### Admin Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Login:** [http://localhost:3000/admin](http://localhost:3000/admin)
+- **Rooms:** [http://localhost:3000/admin/rooms](http://localhost:3000/admin/rooms)
+- **Update a Room:** [http://localhost:3000/admin/rooms/<room_id>](http://localhost:3000/admin/rooms/<room_id>)
+- **Booking Details:** [http://localhost:3000/admin/bookingDetails](http://localhost:3000/admin/bookingDetails)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Admin Credentials:
+
+- **Email:** admin@gmail.com
+- **Password:** admin
+
 
 
 # Hotel Management App
