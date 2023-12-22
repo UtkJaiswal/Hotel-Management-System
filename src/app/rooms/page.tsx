@@ -94,10 +94,10 @@ export default function RoomsPage() {
           <button onClick={logout}>Logout</button>
           <div className="flex items-center justify-center my-4">
             <div className="mx-2">
-              <DatePicker selected={checkInDate} onChange={handleCheckInDateChange} placeholderText="Check-in Date" />
+              <DatePicker selected={checkInDate} onChange={handleCheckInDateChange} placeholderText="Check-in Date" text-black/>
             </div>
             <div className="mx-2">
-              <DatePicker selected={checkOutDate} onChange={handleCheckOutDateChange} placeholderText="Check-out Date" />
+              <DatePicker selected={checkOutDate} onChange={handleCheckOutDateChange} placeholderText="Check-out Date" text-black/>
             </div>
             <button onClick={handleApply} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Apply

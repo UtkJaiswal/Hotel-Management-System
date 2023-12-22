@@ -98,7 +98,7 @@ export default function SignupPage() {
 
             <button
              onClick={onSignUp}
-             className="p-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black">
+             className="p-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 ">
                 {buttonDisabled?"No Sign Up":"Sign Up"}
             </button>
 

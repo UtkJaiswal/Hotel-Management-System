@@ -82,7 +82,7 @@ export default function LoginPage() {
 
             <button
              onClick={onLogin}
-             className="p-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black">
+             className="p-2 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">
                 Login
             </button>
 
